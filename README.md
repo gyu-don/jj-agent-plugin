@@ -14,15 +14,23 @@
 
 ### From Marketplace (Recommended)
 
+First, add the marketplace:
+
 ```
-/plugin install jj
+/plugin marketplace add gyu-don/claude-jj-plugin
+```
+
+Then install the plugin:
+
+```
+/plugin install jj@jj-plugin
 ```
 
 ### From Local Directory
 
 ```bash
 git clone https://github.com/gyu-don/claude-jj-plugin.git
-claude --plugin-dir /path/to/claude-jj-plugin
+/plugin add ./claude-jj-plugin
 ```
 
 ## What's Included
@@ -65,7 +73,7 @@ When you start a Claude Code session in a jj repository:
 
 ## Requirements
 
-- [Claude Code](https://claude.ai/code) v1.0.33 or later
+- [Claude Code](https://code.claude.com/docs) v1.0.33 or later
 - [Jujutsu (jj)](https://github.com/martinvonz/jj) installed on your system
 
 ### Installing jj

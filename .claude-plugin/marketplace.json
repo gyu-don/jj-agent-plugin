@@ -1,0 +1,25 @@
+{
+  "name": "jj-plugin",
+  "owner": {
+    "name": "gyu-don"
+  },
+  "metadata": {
+    "description": "Jujutsu (jj) version control plugin for Claude Code",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "jj",
+      "source": "./",
+      "description": "Jujutsu (jj) version control integration for Claude Code. Provides automatic snapshots, setup assistance, and comprehensive usage guidance.",
+      "version": "0.1.0",
+      "author": {
+        "name": "gyu-don"
+      },
+      "homepage": "https://github.com/gyu-don/claude-jj-plugin",
+      "repository": "https://github.com/gyu-don/claude-jj-plugin",
+      "license": "MIT",
+      "keywords": ["jj", "jujutsu", "version-control", "git", "vcs"]
+    }
+  ]
+}

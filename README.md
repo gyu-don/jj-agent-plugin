@@ -23,7 +23,7 @@ First, add the marketplace:
 Then install the plugin:
 
 ```
-/plugin install jj@jj-plugin
+/plugin install jj@jj
 ```
 
 ### From Local Directory

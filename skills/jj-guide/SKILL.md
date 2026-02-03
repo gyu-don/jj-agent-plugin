@@ -72,8 +72,9 @@ jj file search "pattern" # Search file contents (like git grep)
 ### Working with Changes
 ```bash
 jj new -m "Start new work"        # Create new change
-jj desc -m "Update message"       # Set commit message
+jj desc -m "Update message"       # Set message only (stay on same change)
 jj desc -r @- -m "Fix parent"     # Update parent's message
+jj commit -m "Done"               # desc + new (finalize @, start new)
 ```
 
 ### Splitting Changes

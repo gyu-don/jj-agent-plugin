@@ -5,10 +5,10 @@ jj st >/dev/null 2>&1 || exit 0
 
 # Prevent editor from hanging - fail fast if -m flag is forgotten
 if [ -n "$CLAUDE_ENV_FILE" ]; then
-  echo 'export EDITOR=false' >> "$CLAUDE_ENV_FILE"
+	echo 'export EDITOR=false' >>"$CLAUDE_ENV_FILE"
 fi
 
-cat << 'EOF'
+cat <<'EOF'
 This project uses Jujutsu (jj) for version control instead of git.
 
 Key differences:
@@ -20,13 +20,14 @@ Key differences:
 
 Critical:
 - Always use -m flag (jj desc -m "msg", jj new -m "msg")
-- Set up .gitignore BEFORE creating sensitive files (jj auto-snapshots everything!)
+- jj describe is message only, jj new for next work
 - Use jj bookmark, NOT jj branch (deprecated)
+- SECURITY: Set up .gitignore BEFORE creating sensitive files (jj auto-snapshots everything!)
 
 Common commands:
 - jj st - Show status
-- jj new -m "message" - Create new commit
 - jj describe -m "message" - Set/update commit message
+- jj new -m "message" - Create new commit
 - jj bookmark create <name> - Create bookmark
 - jj undo - Undo last operation
 EOF
